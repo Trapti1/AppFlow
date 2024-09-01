@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>App Desktop Flow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>VENIA</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#women">Women</a></li>
+                    <li><a href="#men">Men</a></li>
+                    <li><a href="#smartgear">Smart Gear</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <i class="fa fa-briefcase">
+                        <span class="badge">10</span>
+                    </i>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <section id="filter" class="filter-section">
+            <div class="product-type">Clothing / Women's / Outerwear</div>
+            <div class="product-type-filter">Filters</div>
+            <hr>
+                <span>
+                    <label class="category-label">Categories</label>
+                    <div id="category-filter">
+                        <label>
+                            <input type="checkbox" value="jewelery"> Jewelery
+                        </label>
+                        <label>
+                            <input type="checkbox" value="electronics"> Electronics
+                        </label>
+                        <label>
+                            <input type="checkbox" value="men's clothing"> Men's Clothing
+                        </label>
+                        <label>
+                            <input type="checkbox" value="women's clothing"> Women's Clothing
+                        </label>
+                    </div>
+                </span>
+        </section>   
+           <span> <input type="text" id="search-input" placeholder="Search"></span>
+            <span><button id="search-button">Search</button></span>
+            <span id="product-count"></span>
+   <div id="product-container">
+    <div class="shimmer-wrapper" id="shimmer-wrapper">
+        <div class="shimmer"></div>
+    </div>
+   </div>
+   <div class="product-sort"> 
+    <select id="sort-options">
+        <option value="default">Sort By</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+    </select>
+</div>
+    </main>
+    <button id="load-more">Load More</button>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

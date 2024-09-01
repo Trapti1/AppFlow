@@ -1,0 +1,213 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #1363DF;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-container h1 {
+    flex: 30%;
+}
+
+.header-container nav {
+    flex: 70%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline 5px;
+    text-underline-offset: 28px; 
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.badge {
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    bottom: 46%;
+  }
+  .main-container {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.filter-section {
+    flex: 30%;
+    align-items: flex-end; 
+    flex-direction: column;
+}
+.fa-briefcase{
+    position: relative;
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 1rem; 
+}
+
+.product {
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product-image {
+    width: 50%;
+    margin: 0 auto; /* Center the image */
+    display: block;
+    height: 50%;
+}
+#load-more{
+    display: block;
+    margin-left: 50%;
+    padding: 1%;
+    border: none;
+}
+
+#search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#product-count {
+    font-size: 10px;
+    color: #777;
+    margin-top: 2%;
+}
+.product-type{
+    font-size: 9px;
+    color: #777;
+    margin-top: 50%;
+}
+.product-type-filter{
+    font-size: 12px;
+    color: black;
+    margin-bottom: 5%;  
+    margin-top: 5%;  
+}
+#category-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    font-size: 10px;
+    color: #777;
+}
+
+#category-filter label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Adds space between the checkbox and the label text */
+}
+
+#category-filter input[type="checkbox"] {
+    margin: 0;
+}
+.category-label{
+    font-size: 10px;
+    color: #777;
+}
+.shimmer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.shimmer {
+    width: 100%;
+    height: 200px;
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .main-container {
+        flex-direction: column;
+    }
+
+    #product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+
+}
+@media (max-width: 320px) {
+    #product-container {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    }
+}
